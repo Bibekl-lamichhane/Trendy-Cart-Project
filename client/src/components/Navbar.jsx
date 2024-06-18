@@ -7,14 +7,12 @@ import {
   NavbarMenu,
   NavbarContent,
   NavbarItem,
-  Link,
   DropdownItem,
   DropdownTrigger,
   Dropdown,
   DropdownMenu,
   Avatar,
   Input,
-  button,
 } from "@nextui-org/react";
 import { PiShoppingCartBold } from "react-icons/pi";
 import { SearchIcon } from "./SearchIcon.jsx";
@@ -26,6 +24,7 @@ import { logoutUser } from "@/redux/reducerSlices/userSlice.js";
 import { products } from "./selectcategorylist/data.js";
 import { FaAngleDown } from "react-icons/fa";
 import { addtoCart, removefromCart } from "@/redux/reducerSlices/cartSlice.js";
+import Link from "next/link.js";
 export default function App() {
   const [cartitemno, setCartitemno] = useState(0);
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -82,7 +81,7 @@ export default function App() {
         </NavbarItem>
         <Dropdown>
           <DropdownTrigger>
-            <div className="flex items-center gap-1">
+            <div className="flex items-center gap-1 cursor-pointer">
               Category <FaAngleDown />
             </div>
           </DropdownTrigger>
