@@ -1,6 +1,24 @@
-# npay
+<!-- This is Read me file of my  Ecommerce Project -->
 
+<a name="readme-top"></a>
 
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/Bibekl-lamichhane/Trendy-Cart-Project/blob/main/README.md">
+    <img src="images\nextrade-removebg-preview.png" alt="Logo" width="80" height="80">
+  </a>
+
+  <h3 align="center">Trendy-Cart-Project/h3>
+
+  <p align="center">
+   Next Trade Link : Your destination for top-quality electronics and home appliances. Browse, shop, and experience seamless online shopping today! 🛒✨
+    <br />
+    <a href="https://github.com/Bibekl-lamichhane/Trendy-Cart-Project/blob/main/README.md"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/Bibekl-lamichhane/Trendy-Cart-Project/blob/main/README.md">View Demo</a>
+   </div>
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -28,60 +46,46 @@
   </ol>
 </details>
 
-
-FRONTEND:
-```
-  cd client
-  npm install
-  npm run dev
-```
-
-BACKEND: 
-```
-  cd server
-  npm install
-  npm run dev
-```
-
-
 <!-- ABOUT THE PROJECT -->
+
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
-
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
-
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
-
-Use the `BLANK_README.md` to get started.
+Trendy-Cart-Project is an e-commerce web application built using Next.js. The application allows users to browse, search, and purchase electronic devices. It includes features such as user authentication, product listings, shopping cart functionality, and order management.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+Here are the few screenshots of my project:
 
+1. Home Page
+<div align="center">
+    <img src="" alt="homepage" width="800" height="480">
+</div>
+<br/>
 
 ### Built With
 
 This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
+#### Front End
+
+- [![Next][Next.js]][Next-url]
+- [![React][React.js]][React-url]
+- [![Bootstrap][Bootstrap.com]][Bootstrap-url]
+- [![tailwindcss][tailwindcss]][tailwindcss-url]
+
+#### Back End
+
+- [![Node][Node.js]][Node-url]
+- [![Express][Express.js]][Express-url]
+
+#### Database
+
+- [![MongoDB][MongoDB]][mongodb-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 <!-- GETTING STARTED -->
+
 ## Getting Started
 
 This is an example of how you may give instructions on setting up your project locally.
@@ -90,7 +94,8 @@ To get a local copy up and running follow these simple example steps.
 ### Prerequisites
 
 This is an example of how to list things you need to use the software and how to install them.
-* npm
+
+- npm
   ```sh
   npm install npm@latest -g
   ```
@@ -110,68 +115,144 @@ _Below is an example of how you can instruct your audience on installing and set
    ```
 4. Enter your API in `config.js`
    ```js
-   const API_KEY = 'ENTER YOUR API';
+   const API_KEY = "ENTER YOUR API";
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 <!-- USAGE EXAMPLES -->
+
 ## Usage
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+_For more examples, please refer to the [Documentation](https://nextjs.org/)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-
-# PANELS
-- [ ] Admin-	Admin panel
-- [ ] User- user panel 
-
-# Features phase-1
-
-- [x] 1. Authentication (LOGIN REGISTER) (password hashing, JWT, db save details)
-- [ ] 2. KYC (image upload)
-- [ ] 3. Admin approve KYC (wallet features unlock) (multi user login) (sidebar ->0. dashboard 1.  kyc validate (send email) 2. add institution )
-
-- [ ] 1. 100 balance  
-- [ ] 2. 4 sections: (multiple layout)
-    2.1 Dashboard (graph and reward point)
-        -  bar graph to display daily expenditure
-        -  expense tracker 
-    2.2 Transactions (limit) - usera-userb   usera-institution
-    2.3 Statement/History (pdf generate)
-- [ ] 3. real time cash update (web socket)
-- [ ] 4. map to display transaction location (google map)
-
-
-
-# phase-2
-- [x] 1. integrate esewa
-- [x] 2. google login
-- [x] 3. support
-- [x] 4. deployment
-- [x] 4. 
-
----- route protect------ 
---- 
-
 
 <!-- ROADMAP -->
 
+## Panels
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
+- [ ] Admin-Admin panel
+- [ ] User- user panel
+
+## Features
+
+### User Features
+
+User Authentication
+
+- [ ] User Registration: Users can create an account with their email and password.
+- [ ] User Login: Users can log in with their credentials.
+- [ ] Password Recovery: Users can reset their password if they forget it.
+- [ ] Profile Management: Users can view and update their profile information.
+- [ ] Google Login: Users can log in using their Google account (Phase 2).
+
+Product Browsing
+
+- [ ] Product Listings: Display a list of products with images, descriptions, prices, and ratings.
+- [ ] Product Categories: Products organized into categories such as laptops, smartphones, accessories, etc.
+- [ ] Search Functionality: Users can search for products using keywords.
+- [ ] Filters and Sorting: Filter products by price, category, brand, and sort by price, popularity, or rating.
+
+Product Details
+
+- [ ] Detailed Product Pages: Each product has a dedicated page with detailed information, multiple images, and customer reviews.
+- [ ] Customer Reviews and Ratings: Users can read and write reviews for products.
+
+Shopping Cart
+
+- [ ] Add to Cart: Users can add products to their shopping cart.
+- [ ] Cart Management: Users can view items in their cart, update quantities, or remove items.
+- [ ] Persistent Cart: Items remain in the cart even if the user logs out.
+
+Checkout Process
+
+- [ ] Order Summary: Users can view a summary of their order, including items, quantities, and totals.
+- [ ] Shipping Information: Users can enter and save shipping addresses.
+- [ ] Payment Integration: Integration with payment gateways such as eSewa (Phase 2).
+- [] Order Confirmation: Users receive an order confirmation via email.
+
+Order Management
+
+- [ ] Order History: Users can view their past orders and their statuses.
+- [ ] Order Tracking: Users can track the status of their current orders (e.g., processing, shipped, delivered).
+
+Wis list
+
+- [ ] Ad to Wishlist: Users can add products to a wishlist for future reference.
+
+Customer Support
+
+- [ ] Support Ticket System: Users can submit support requests and track their status (Phase 2).
+- [ ] Live Chat Support: Real-time chat support for instant help (Phase 2).
+
+### Admin Features
+
+Admin Dashboard
+
+- [ ] Overview: Metrics such as sales, active users, and inventory status.
+- [ ] Recent Activity: View recent orders, reviews, and user activity.
+
+Product Management
+
+- [ ] Add/Update/Delete Products: Manage the product catalog with an intuitive interface.
+- [ ] Inventory Management: Track stock levels and update inventory.
+
+Order Management
+
+- [ ] View and Manage Orders: Process and update customer orders.
+- [ ] Order Status Updates: Change order statuses and notify customers.
+
+User Management
+
+- [ ] Manage User Accounts: View and manage user profiles and permissions.
+- [ ] KYC Validation: Review and approve user KYC submissions.
+
+Notifications
+
+- [ ] Email Notifications: Send updates and promotional emails to users.
+- [ ] Push Notifications: Send real-time notifications to users about their orders and promotions (Phase 2).
+
+#### General Features
+
+Security
+
+- [ ] Data Encryption: Encrypt sensitive data such as passwords and payment information.
+- [ ] Secure Authentication: Implement secure authentication mechanisms to protect user accounts.
+- [ ] Role-Based Access Control: Different access levels for admins and users.
+
+Performance and Scalability
+
+- [ ] Caching: Implement caching for faster load times.
+- [ ] Load Balancing: Distribute traffic evenly to ensure the application can handle high loads.
+
+Responsive Design
+
+- [ ] Mobile Optimization: Ensure the website is fully functional on mobile devices.
+- [ ] Responsive Layout: Adapt the layout to different screen sizes for optimal usability.
+
+Real-time Features
+
+- [ ] WebSocket Integration: Real-time updates for features like cart, notifications, and live support.
+
+Analytics and Reporting
+
+- [ ] Sales Reports: Generate reports on sales data.
+- [ ] User Activity Reports: Track user engagement and activity on the site.
+
+#### Phase 2 Features
+
+- [ ] Payment Gateway Integration: Integrate additional payment gateways like eSewa.
+- [ ] Google Login: Allow users to log in using their Google account.
+- [ ] Customer Support Enhancements: Implement a comprehensive support ticket system and live chat support.
+- [ ] Deployment: Prepare and deploy the application to a production environment.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 <!-- CONTRIBUTING -->
+
 ## Contributing
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
@@ -187,74 +268,56 @@ Don't forget to give the project a star! Thanks again!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 <!-- LICENSE -->
+
 ## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 <!-- CONTACT -->
+
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Bibek Lamichhane - [@Linked in](https://www.linkedin.com/in/bibek-lamichhane-b88335299/) - bibek1999lamichhane@gmail.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [https://github.com/Bibekl-lamichhane/Trendy-Cart-Project](https://github.com/Bibekl-lamichhane/Trendy-Cart-Project)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 <!-- ACKNOWLEDGMENTS -->
+
 ## Acknowledgments
 
 Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
 
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
-* [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
+- [Choose an Open Source License](https://choosealicense.com)
+- [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
+- [Tailwind Cheatsheet](https://tailwindcomponents.com/cheatsheet/)
+- [Img Shields](https://shields.io)
+- [Font Awesome](https://fontawesome.com)
+- [React Icons](https://react-icons.github.io/react-icons/search)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: images/screenshot.png
+
+[issues-url]: https://github.com/Bibekl-lamichhane/Trendy-Cart-Project/issues
+[license-url]: https://github.com/Bibekl-lamichhane/Trendy-Cart-Project/blob/main/LICENSE
+[linkedin-url]: https://www.linkedin.com/in/bibek-lamichhane-b88335299/
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
-[Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
-[Vue-url]: https://vuejs.org/
-[Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
-[Angular-url]: https://angular.io/
-[Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
-[Svelte-url]: https://svelte.dev/
-[Laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
-[Laravel-url]: https://laravel.com
 [Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
 [Bootstrap-url]: https://getbootstrap.com
-[JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[JQuery-url]: https://jquery.com 
+[tailwindcss]: https://img.shields.io/badge/tailwindcss-38B2AC?style=flat&logo=tailwindcss&logoColor=white
+[tailwindcss-url]: https://tailwindcss.com
+[mongodb-url]: https://www.mongodb.com/
+[MongoDB]: https://img.shields.io/badge/mongodb-47A248?style=flat&logo=mongodb&logoColor=white
+[Express-url]: https://expressjs.com/
+[Express.js]: https://img.shields.io/badge/express.js-000000?style=flat&logo=express&logoColor=white
+[Node-url]: https://nodejs.org/en
+[Node.js]: https://img.shields.io/badge/node.js-339933?style=flat&logo=node.js&logoColor=white
