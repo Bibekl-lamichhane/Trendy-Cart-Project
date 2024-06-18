@@ -1,0 +1,87 @@
+[
+    {
+      "name": "Apple MacBook Air 13.3 with Retina Display",
+      "price": 990,
+      "category": "Electronics",
+      "image": "/products/Apple MacBook Air 13.3 with Retina Display/pink/1.jpg",
+      "label": "New Arrival"
+    },
+    {
+      "name": "Apple watch SE",
+      "price": 89.99,
+      "category": "Electronics",
+      "image": "/products/Apple watch/grey/1.jpg",
+      "label": "New Arrival"
+    },
+    {
+      "name": "Asus ROG Zephyrus G15 2021",
+      "price": 950,
+      "category": "Electronics",
+      "image": "/products/Asus ROG Zephyrus G15 2021 GA503QE Ryzen 9 5900HX  RTX 3050Ti  16GB RAM  1TB SSD  15.6 FHD 144Hz display/1.png",
+      "label": "Top Rated"
+    },
+    {
+      "name": "IPC-HDW2231TM-AS-S CCTV",
+      "price": 199.99,
+      "category": "Electronics",
+      "image": "/products/IPC-HDW2231TM-AS-S2/1.jpg",
+      "label": "Best Seller"
+    },
+    {
+      "name": "IPC-HDW2231TM-AS-S2/2MP Lite IR Fixed-focal Bullet Network Camera",
+      "price": 394.99,
+      "category": "Electronics",
+      "image": "/products/IPC-HDW2231TM-AS-S2/2MP Lite IR Fixed-focal Bullet Network Camera.jpg",
+      "label": "Limited Edition"
+    },
+    {
+      "name": "IPC-HDW2231TM-AS-S2/C1C EZVIZ Wireless CCTV",
+      "price": 89.99,
+      "category": "Electronics",
+      "image": "/products/IPC-HDW2231TM-AS-S2/C1C EZVIZ Wireless CCTV.jpg",
+      "label": "Best Seller"
+    },
+    {
+      "name": "IPC-HDW2231TM-AS-S2/Wireless Outdoor CCTV",
+      "price": 89.99,
+      "category": "Electronics",
+      "image": "/products/IPC-HDW2231TM-AS-S2/Wireless Outdoor C3WN.jpg",
+      "label": "Best Seller"
+    },
+    {
+      "name": "iphone 15",
+      "price": 899.99,
+      "category": "Electronics",
+      "image": "/products/iphone 15/3.jpg",
+      "label": "New Arrival"
+    },
+    {
+      "name": "iphone 15 case",
+      "price": 899.99,
+      "category": "Electronics",
+      "image": "/products/iphone 15 case/3.jpg",
+      "label": "New Arrival"
+    },
+    {
+      "name": "iphone 15 pro",
+      "price": 899.99,
+      "category": "Electronics",
+      "image": "/products/iphone 15 pro/2.jpg",
+      "label": "New Arrival"
+    },
+    {
+      "name": "MacBook Pro With Apple M1 Pro Chip1",
+      "price": 89.99,
+      "category": "Electronics",
+      "image": "/products/MacBook Pro With Apple M1 Pro Chip/MacBook Pro With Apple M1 Pro Chip1.jpg",
+      "label": "Best Seller"
+    },
+    {
+      "name": "X-AGE Wired Earphone XWE05",
+      "price": 89.99,
+      "category": "Electronics",
+      "image": "/products/X-AGE Wired Earphone XWE05/1.jpg.png",
+      "label": "Top Rated"
+    }
+   
+  ]

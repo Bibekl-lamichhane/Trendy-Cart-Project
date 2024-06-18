@@ -1,14 +1,16 @@
 import React from "react";
 import Navbar from "@/components/Navbar";
+import About from "@/components/About";
 import Footer from "@/components/Footer";
 
-const Categories = () => {
+const page = () => {
   return (
     <div>
       <Navbar />
+      <About />
       <Footer />
     </div>
   );
 };
 
-export default Categories;
+export default page;

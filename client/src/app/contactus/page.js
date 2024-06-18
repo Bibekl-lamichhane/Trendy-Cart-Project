@@ -7,7 +7,7 @@ const page = () => {
     <div>
       <Navbar />
       <div>
-        <div className="container pl-8 p-24 pb-5 lg:pt-40">
+        <div className="container pl-8 p-2 pb-5 lg:pt-10">
           <div className="flex">
             <p className="font-bold text-base lg:text-5xl lg:pl-32">
               Welcome to,
@@ -24,7 +24,7 @@ const page = () => {
           <div className="m-5">
             <img
               src="\customer.png"
-              className=" mx-auto md:mt-24 w-[350px] h-[350px] md:w-[300px] md:h-[300px] lg:w-[420px] lg:h-[420px] md:ml-"
+              className=" mx-auto md:mt-15 w-[350px] h-[350px] md:w-[300px] md:h-[300px] lg:w-[420px] lg:h-[420px] "
               alt="customercare pic"
             />
           </div>

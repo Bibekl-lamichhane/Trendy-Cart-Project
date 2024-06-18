@@ -3,9 +3,9 @@ import React from "react";
 const About = () => {
   return (
     <div className="min-h-screen my-5">
-      <div className="container mx-auto px-4 pt-36 py-15 md:flex md:items-center md:justify-between">
+      <div className="container mx-auto px-4 pt-18 py-15 md:flex md:items-center md:justify-between">
         <div className="w-full md:w-1/2 mb-8 md:mb-0">
-          <h1 className="text-3xl font-bold text-orange-500 mb-4">
+          <h1 className="text-4xl  font-bold text-orange-500 mb-4">
             About Trendy Cart
           </h1>
           <p className="text-lg leading-relaxed">

@@ -16,11 +16,10 @@ const Discounts = ({ DiscountPer, DiscountProductName, DiscountPrice }) => {
           ${DiscountPrice}
         </span>
       </div>
-      <Link
-        href="/products"
-        className="  bg-orange-500 text-white px-2 py-1  text-[10px] md:my-3 md:text-sm  lg:base lg:py-2 lg:px-4 lg:my-10 text-center font-extrabold font-mono rounded-3xl  hover:bg-blue-600 hover:text-opacity-100"
-      >
-        Shop Now
+      <Link href="/products">
+        <button className=" self-center bg-orange-400 px-2 py-1 lg:px-3  lg:py-2 lg:mt-3 rounded-2xl text-white   font-bold hover:bg-orange-500 focus:ring-4 focus:bg-orange-500 text-[6px] lg:text-small">
+          Shop Now
+        </button>
       </Link>
     </div>
   );

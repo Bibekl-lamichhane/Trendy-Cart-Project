@@ -91,9 +91,15 @@ export default function Main() {
   };
 
   return (
-    <div className="flex flex-col w-full ">
+    <div className="flex flex-col w-full mt-10 ">
       <Card className=" flex self-center max-w-full w-[340px] ">
-        <Image src="/logo.png" width={100} height={100} alt="logo" />
+        <div className="">
+          <Image src="/logo.png" width={100} height={100} alt="logo" />
+          <h1 className="ml-6 text-2xl font-bold text-orange-500">
+            Welcome to Trendy Cart
+          </h1>
+        </div>
+
         <CardBody className="overflow-hidden">
           <Tabs
             fullWidth

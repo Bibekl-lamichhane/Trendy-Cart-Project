@@ -1,14 +1,11 @@
 {
     "admin": [
-        {"id":1, "name": "User KYC", "link": "/user-kyc"},
-        {"id":1, "name": "Send", "link": "/send"},
-        {"id":1, "name": "Statement", "link": "/statement"},
-        {"id":1, "name": "Profile", "link": "/profile"}
-    ],
-    "user": [
-        {"id":1, "name": "Dashboard", "link": "/dashboard"},
-        {"id":1, "name": "Send", "link": "/send"},
-        {"id":1, "name": "Statement", "link": "/statement"},
-        {"id":1, "name": "Profile", "link": "/profile"}
+        {"id":1, "name": "Dashboard", "link": "/admin-dashboard"},
+        {"id":2, "name": "Add Category", "link": "/addcategory"},
+        {"id":3, "name": "Add Product", "link": "/addproduct"},  
+        {"id":4, "name": "Manage User", "link": "/manageuser"} ,   
+        {"id":5, "name": "Profile", "link": "/profile"}
+        
     ]
+   
 }

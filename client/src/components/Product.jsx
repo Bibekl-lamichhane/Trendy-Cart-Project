@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import Cards from "./Cards";
+import Cards from "./Card";
 import axios from "axios";
 import Link from "next/link";
 function Product() {
@@ -9,7 +9,7 @@ function Product() {
   useEffect(() => {
     const getProduct = async () => {
       try {
-        const res = await axios.get("http://localhost:4001/product");
+        const res = await axios.get("http://localhost:4000/product");
         console.log(res.data);
         setProduct(res.data);
       } catch (error) {
@@ -20,7 +20,7 @@ function Product() {
   }, []);
   return (
     <>
-      <div className=" max-w-screen-2xl container mx-auto md:px-20 lg:pt-32 px-4">
+      <div className=" max-w-screen-2xl container mx-auto md:px-20 lg:pt-10 px-4">
         <div className="pt-28 items-center justify-center text-center">
           <h1 className="text-2xl  md:text-4xl">
             New Products:
@@ -36,7 +36,7 @@ function Product() {
             offer something for everyone. Enroll today and embark on your
             learning journey with us!
           </p>
-          <Link to="/">
+          <Link href="/home">
             <button className="mt-6 bg-orange-500 text-white px-4 py-2 rounded-md hover:bg-orange-600 duration-300">
               Back
             </button>

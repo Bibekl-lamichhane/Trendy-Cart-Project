@@ -1,16 +1,15 @@
 import React from "react";
 import Navbar from "@/components/Navbar";
-import About from "@/components/About";
 import Footer from "@/components/Footer";
-
-const AboutUs = () => {
+import Product from "@/components/Product";
+function page() {
   return (
-    <div>
+    <>
       <Navbar />
-      <About />
+      <Product />
       <Footer />
-    </div>
+    </>
   );
-};
+}
 
-export default AboutUs;
+export default page;

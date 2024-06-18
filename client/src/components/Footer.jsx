@@ -1,29 +1,30 @@
+import Link from "next/link";
 import React from "react";
 import { FaLinkedin } from "react-icons/fa";
 function Footer() {
   return (
     <div className="mt-8">
       <hr />
-      <footer className="footer footer-center  p-10 text-base-content rounded dark:bg-slate-900 dark:text-white shadow-lg">
-        <nav className="grid grid-flow-col gap-4">
-          <a to="/" className="link-hover hover:text-orange-500 ">
+      <footer className="flex-col  p-10 text-base-content rounded dark:bg-slate-900 dark:text-white shadow-lg">
+        <nav className="grid grid-flow-col gap-14 justify-center">
+          <Link href="/home" className="link-hover hover:text-orange-500 ">
             Home
-          </a>
-          <a href="/aboutus" className="link-hover hover:text-orange-500">
+          </Link>
+          <Link href="/aboutus" className="link-hover hover:text-orange-500">
             About us
-          </a>
-          <a href="/contactus" className="link-hover hover:text-orange-500">
+          </Link>
+          <Link href="/contactus" className="link-hover hover:text-orange-500">
             Contact Us
-          </a>
-          <a href="/#" className="link-hover hover:text-orange-500">
+          </Link>
+          <Link href="#" className="link-hover hover:text-orange-500">
             Offers
-          </a>
-          <a href="/course" className="link-hover hover:text-orange-500">
-            Course
-          </a>
+          </Link>
+          <Link href="/products" className="link-hover hover:text-orange-500">
+            Shop Now
+          </Link>
         </nav>
         <nav>
-          <div className="grid grid-flow-col gap-4">
+          <div className="my-8 grid grid-flow-col gap-8 justify-center ">
             <a>
               <svg
                 xmlns="http://www.w3.org/2000/svg"

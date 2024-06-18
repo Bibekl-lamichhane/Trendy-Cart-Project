@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import axios from "axios";
 
-import Cards from "./Cards";
+import Cards from "./Card";
 function BestDeal() {
   const [product, setProduct] = useState([]);
 

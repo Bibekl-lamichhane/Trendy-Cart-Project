@@ -1,8 +1,7 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import {
   Navbar,
-  NavbarBrand,
   NavbarMenuToggle,
   NavbarMenuItem,
   NavbarMenu,
@@ -15,26 +14,46 @@ import {
   DropdownMenu,
   Avatar,
   Input,
+  button,
 } from "@nextui-org/react";
+import { PiShoppingCartBold } from "react-icons/pi";
 import { SearchIcon } from "./SearchIcon.jsx";
-
 import Logo from "./../../public/logo.png";
 import Image from "next/image";
-
+import { useDispatch, useSelector } from "react-redux";
+import { useRouter } from "next/navigation.js";
+import { logoutUser } from "@/redux/reducerSlices/userSlice.js";
+import { products } from "./selectcategorylist/data.js";
+import { FaAngleDown } from "react-icons/fa";
+import { addtoCart, removefromCart } from "@/redux/reducerSlices/cartSlice.js";
 export default function App() {
+  const [cartitemno, setCartitemno] = useState(0);
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
+  const { userDetails } = useSelector((state) => state.user);
+  const { noofiteminCart } = useSelector((state) => state.cart);
+
+  const dispatch = useDispatch();
+  const router = useRouter();
+  const addtocart = () => {
+    dispatch(addtoCart());
+    setCartitemno(cartitemno + 1);
+  };
+  const logout = () => {
+    dispatch(logoutUser());
+    router.push("/");
+  };
+  const removefromcart = () => {
+    dispatch(removefromCart());
+    setCartitemno(cartitemno - 1);
+  };
+
   const menuItems = [
-    "Profile",
-    "Dashboard",
-    "Activity",
-    "Analytics",
-    "System",
-    "Deployments",
-    "My Settings",
-    "Team Settings",
-    "Help & Feedback",
-    "Log Out",
+    { id: 1, name: "Home", link: "/home" },
+    { id: 2, name: "Shop", link: "/products" },
+    { id: 3, name: "Contact Us", link: "/contactus" },
+    { id: 4, name: "About Us", link: "/aboutus" },
+    { id: 4, name: "Log Out", link: "/" },
   ];
 
   return (
@@ -45,42 +64,65 @@ export default function App() {
         />
       </NavbarContent>
 
-      <NavbarContent className="sm:hidden pr-3" justify="center">
-        <NavbarBrand className="hidden  lg:block">
-          <Image src={Logo} />
-        </NavbarBrand>
+      <NavbarContent className="hidden lg:flex" justify="start">
+        <Image
+          className="hidden  lg:block"
+          src={Logo}
+          width={80} // Set the width you desire
+          height={40}
+        />
+      </NavbarContent>
+      <NavbarContent className="hidden lg:flex gap-8 " justify="center">
+        {/* <button onClick={addtocart}>+</button>
+        <button onClick={removefromcart}>-</button> */}
+        <NavbarItem>
+          <Link color="foreground" href="/home">
+            Home
+          </Link>
+        </NavbarItem>
+        <Dropdown>
+          <DropdownTrigger>
+            <div className="flex items-center gap-1">
+              Category <FaAngleDown />
+            </div>
+          </DropdownTrigger>
+          <DropdownMenu
+            aria-label="Dynamic Actions"
+            items={products}
+            className="max-h-60 overflow-y-auto"
+          >
+            {(item) => (
+              <DropdownItem
+                key={item.key}
+                color={item.key === "delete" ? "danger" : "default"}
+                className={item.key === "delete" ? "text-danger" : ""}
+              >
+                {item.label}
+              </DropdownItem>
+            )}
+          </DropdownMenu>
+        </Dropdown>
+        <NavbarItem>
+          <Link href="/products" color="foreground">
+            Shop Now
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link href="/contactus" color="foreground">
+            Contact Us
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link href="aboutus" color="foreground">
+            About Us
+          </Link>
+        </NavbarItem>
       </NavbarContent>
 
-      <NavbarContent className="hidden sm:flex gap-4" justify="center">
-        <NavbarBrand>
-          <Image
-            className="hidden  lg:block"
-            src={Logo}
-            width={80}
-            height={40}
-          />
-        </NavbarBrand>
-        <NavbarItem>
-          <Link color="foreground" href="#">
-            Features
-          </Link>
-        </NavbarItem>
-        <NavbarItem isActive>
-          <Link href="#" aria-current="page">
-            Customers
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link color="foreground" href="#">
-            Integrations
-          </Link>
-        </NavbarItem>
-      </NavbarContent>
-
-      <NavbarContent as="div" className="items-center" justify="end">
+      <NavbarContent as="div" className="items-center ml-10" justify="end">
         <Input
           classNames={{
-            base: "max-w-full sm:max-w-[10rem] h-10 hidden lg:block",
+            base: "max-w-full sm:max-w-[10rem]  w-[20rem] h-10 hidden lg:block ",
             mainWrapper: "h-full",
             input: "text-small",
             inputWrapper:
@@ -91,6 +133,9 @@ export default function App() {
           startContent={<SearchIcon size={18} />}
           type="search"
         />
+      </NavbarContent>
+
+      <NavbarContent as="div" className="items-center" justify="end">
         <Dropdown placement="bottom-end ">
           <DropdownTrigger>
             <Avatar
@@ -98,7 +143,7 @@ export default function App() {
               as="button"
               className="transition-transform hidden lg:block"
               color="secondary"
-              name="Jason Hughes"
+              name={userDetails.fullName}
               size="sm"
               src="https://i.pravatar.cc/150?u=a042581f4e29026704d"
             />
@@ -106,7 +151,7 @@ export default function App() {
           <DropdownMenu aria-label="Profile Actions" variant="flat">
             <DropdownItem key="profile" className="h-14 gap-2">
               <p className="font-semibold">Signed in as</p>
-              <p className="font-semibold">zoey@example.com</p>
+              <p className="font-semibold">{userDetails.email}</p>
             </DropdownItem>
             <DropdownItem key="settings">My Settings</DropdownItem>
             <DropdownItem key="team_settings">Team Settings</DropdownItem>
@@ -114,13 +159,22 @@ export default function App() {
             <DropdownItem key="system">System</DropdownItem>
             <DropdownItem key="configurations">Configurations</DropdownItem>
             <DropdownItem key="help_and_feedback">Help & Feedback</DropdownItem>
-            <DropdownItem key="logout" color="danger">
+            <DropdownItem key="logout" color="danger" onClick={() => logout()}>
               Log Out
             </DropdownItem>
           </DropdownMenu>
         </Dropdown>
       </NavbarContent>
-
+      <NavbarContent>
+        <div className="flex">
+          <button className="relative">
+            <PiShoppingCartBold size={27} color="blue" />
+            <span className="rounded-full bg-orange-400 text-white px-[1.5px] py-[1.5px] text-[11px] absolute bottom-[14px] left-[20px]">
+              {cartitemno}
+            </span>
+          </button>
+        </div>
+      </NavbarContent>
       <NavbarMenu>
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
@@ -133,10 +187,10 @@ export default function App() {
                   ? "danger"
                   : "foreground"
               }
-              href="#"
+              href={item.link}
               size="lg"
             >
-              {item}
+              {item.name}
             </Link>
           </NavbarMenuItem>
         ))}
