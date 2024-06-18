@@ -9,10 +9,10 @@
     <img src="images\nextrade-removebg-preview.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Trendy-Cart-Project/h3>
+  <h3 align="center">Trendy-Cart-Project</h3>
 
   <p align="center">
-   Next Trade Link : Your destination for top-quality electronics and home appliances. Browse, shop, and experience seamless online shopping today! 🛒✨
+  Trendy-Cart-Project: Your destination for top-quality electronics and home appliances. Browse, shop, and experience seamless online shopping today! 🛒✨
     <br />
     <a href="https://github.com/Bibekl-lamichhane/Trendy-Cart-Project/blob/main/README.md"><strong>Explore the docs »</strong></a>
     <br />
@@ -50,7 +50,7 @@
 
 ## About The Project
 
-Trendy-Cart-Project is an e-commerce web application built using Next.js. The application allows users to browse, search, and purchase electronic devices. It includes features such as user authentication, product listings, shopping cart functionality, and order management.
+Trendy-Cart-Project is an e-commerce web application built using Next.js. The application allows users to browse, search, and purchase diffrent products. It includes features such as user authentication, product listings, shopping cart functionality, and order management.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -134,8 +134,8 @@ _For more examples, please refer to the [Documentation](https://nextjs.org/)_
 
 ## Panels
 
-- [ ] Admin-Admin panel
-- [ ] User- user panel
+- [x] Admin-Admin panel
+- [x] User- user Panel
 
 ## Features
 
@@ -143,8 +143,6 @@ _For more examples, please refer to the [Documentation](https://nextjs.org/)_
 
 User Authentication
 
-- [ ] User Registration: Users can create an account with their email and password.
-- [ ] User Login: Users can log in with their credentials.
 - [ ] Password Recovery: Users can reset their password if they forget it.
 - [ ] Profile Management: Users can view and update their profile information.
 - [ ] Google Login: Users can log in using their Google account (Phase 2).
@@ -172,7 +170,7 @@ Checkout Process
 - [ ] Order Summary: Users can view a summary of their order, including items, quantities, and totals.
 - [ ] Shipping Information: Users can enter and save shipping addresses.
 - [ ] Payment Integration: Integration with payment gateways such as eSewa (Phase 2).
-- [] Order Confirmation: Users receive an order confirmation via email.
+- [ ] Order Confirmation: Users receive an order confirmation via email.
 
 Order Management
 
@@ -208,7 +206,6 @@ Order Management
 User Management
 
 - [ ] Manage User Accounts: View and manage user profiles and permissions.
-- [ ] KYC Validation: Review and approve user KYC submissions.
 
 Notifications
 
@@ -230,7 +227,7 @@ Performance and Scalability
 
 Responsive Design
 
-- [ ] Mobile Optimization: Ensure the website is fully functional on mobile devices.
+- [x] Mobile Optimization: Ensure the website is fully functional on mobile devices.
 - [ ] Responsive Layout: Adapt the layout to different screen sizes for optimal usability.
 
 Real-time Features
