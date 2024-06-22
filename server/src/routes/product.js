@@ -1,33 +1,25 @@
-const express = require("express");
-const router = express.Router();
+const { Router } = require("express");
+const multer = require("multer");
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, "uploads/product");
+  },
+  filename: function (req, file, cb) {
+    cb(null, Date.now() + file.originalname);
+  },
+});
+
+const upload = multer({ storage: storage });
+const router = Router();
+
 const {
-  allProducts,
-  productsByCategory,
-  filterProducts,
-  addProducts,
-  editProduct,
-  deleteProduct,
-  productDetails,
-  deleteProductImage,
-  searchProducts,
-} = require("../controllers/products");
+  addNewProduct,
+  getAllProducts,
+  getProductDetailsById,
+} = require("../controllers/product");
 
-router.get("/products/all", allProducts);
-
-router.get("/products", productsByCategory);
-
-router.get("/filterProducts", filterProducts);
-
-router.post("/products/add", addProducts);
-
-router.patch("/product/edit/:id", editProduct);
-
-router.delete("/product/delete/:id", deleteProduct);
-
-router.get("/product/description/:id", productDetails);
-
-router.patch("/product/deleteimg/:id", deleteProductImage);
-
-router.get("/search-products", searchProducts);
+router.post("/products", upload.single("productImage"), addNewProduct);
+router.get("/products", getAllProducts);
+router.get("/products/:id", getProductDetailsById);
 
 module.exports = router;

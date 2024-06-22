@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import axios from "axios";
 
-import Cards from "./Card";
+import Card from "./ProductCard";
 function BestDeal() {
   const [product, setProduct] = useState([]);
 
@@ -15,8 +15,8 @@ function BestDeal() {
   useEffect(() => {
     const getProduct = async () => {
       try {
-        const res = await axios.get("http://localhost:4000/product");
-        const data = res.data.filter((data) => data.label === "Best Seller");
+        const res = await axios.get("http://localhost:4000/products");
+        const data = res.data.filter((data) => data.label === "Best Deal");
         setProduct(data);
       } catch (error) {
         console.log(error);
@@ -73,7 +73,7 @@ function BestDeal() {
           <div>
             <Slider {...settings}>
               {product.map((item) => (
-                <Cards item={item} key={item.id} />
+                <Card item={item} key={item.id} />
               ))}
             </Slider>
           </div>

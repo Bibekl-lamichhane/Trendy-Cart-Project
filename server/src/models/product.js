@@ -2,15 +2,12 @@ const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
 const productSchema = new Schema({
-  productName: { type: String, required: true },
-  price: { type: Number, required: true },
-  rating: { type: Number, required: true },
-  category: { type: String, required: true },
-  colors: [{ type: String, required: true }],
-  currency: { type: String, required: true },
-  description: { type: String, required: true },
-  imageUrl: [{ type: String, required: true }],
+  productName: String, // String is shorthand for {type: String}
+  productPrice: String,
+  productDescription: String,
+  productCategory: String,
+  productLabel: String,
+  productImage: String,
 });
-const ProductCard = mongoose.model("ProductCard", productSchema);
-
-module.exports = ProductCard;
+const Product = mongoose.model("Product", productSchema);
+module.exports = Product;

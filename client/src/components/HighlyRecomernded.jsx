@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import axios from "axios";
 
-import Cards from "./Card";
+import Card from "./ProductCard";
 function HighlyRecommended() {
   const [product, setProduct] = useState([]);
 
@@ -15,8 +15,8 @@ function HighlyRecommended() {
   useEffect(() => {
     const getProduct = async () => {
       try {
-        const res = await axios.get("http://localhost:4000/product");
-        const data = res.data.filter((data) => data.label === "Best Seller");
+        const res = await axios.get("http://localhost:4000/products");
+        const data = res.data.filter((data) => data.label === "Hot");
         setProduct(data);
       } catch (error) {
         console.log(error);
@@ -38,8 +38,8 @@ function HighlyRecommended() {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToShow: 2,
+          slidesToScroll: 2,
           infinite: true,
           dots: true,
         },
@@ -73,7 +73,7 @@ function HighlyRecommended() {
           <div>
             <Slider {...settings}>
               {product.map((item) => (
-                <Cards item={item} key={item.id} />
+                <Card item={item} key={item.id} />
               ))}
             </Slider>
           </div>

@@ -23,28 +23,18 @@ import { useRouter } from "next/navigation.js";
 import { logoutUser } from "@/redux/reducerSlices/userSlice.js";
 import { products } from "./selectcategorylist/data.js";
 import { FaAngleDown } from "react-icons/fa";
-import { addtoCart, removefromCart } from "@/redux/reducerSlices/cartSlice.js";
 import Link from "next/link.js";
-export default function App() {
-  const [cartitemno, setCartitemno] = useState(0);
+export default function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const { userDetails } = useSelector((state) => state.user);
-  const { noofiteminCart } = useSelector((state) => state.cart);
 
   const dispatch = useDispatch();
   const router = useRouter();
-  const addtocart = () => {
-    dispatch(addtoCart());
-    setCartitemno(cartitemno + 1);
-  };
+
   const logout = () => {
     dispatch(logoutUser());
     router.push("/");
-  };
-  const removefromcart = () => {
-    dispatch(removefromCart());
-    setCartitemno(cartitemno - 1);
   };
 
   const menuItems = [
@@ -72,8 +62,6 @@ export default function App() {
         />
       </NavbarContent>
       <NavbarContent className="hidden lg:flex gap-8 " justify="center">
-        {/* <button onClick={addtocart}>+</button>
-        <button onClick={removefromcart}>-</button> */}
         <NavbarItem>
           <Link color="foreground" href="/home">
             Home
@@ -169,7 +157,7 @@ export default function App() {
           <button className="relative">
             <PiShoppingCartBold size={27} color="blue" />
             <span className="rounded-full bg-orange-400 text-white px-[1.5px] py-[1.5px] text-[11px] absolute bottom-[14px] left-[20px]">
-              {cartitemno}
+              {0}
             </span>
           </button>
         </div>

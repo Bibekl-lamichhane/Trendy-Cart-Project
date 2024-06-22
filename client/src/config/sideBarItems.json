@@ -1,8 +1,8 @@
 {
     "admin": [
         {"id":1, "name": "Dashboard", "link": "/admin-dashboard"},
-        {"id":2, "name": "Add Category", "link": "/addcategory"},
-        {"id":3, "name": "Add Product", "link": "/addproduct"},  
+        {"id":2, "name": "Add Product", "link": "/addproduct"},  
+        {"id":3, "name": "Update Product", "link": "/updateproduct"},  
         {"id":4, "name": "Manage User", "link": "/manageuser"} ,   
         {"id":5, "name": "Profile", "link": "/profile"}
         

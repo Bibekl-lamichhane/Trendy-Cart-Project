@@ -33,9 +33,8 @@ export default function SideBar() {
     <Listbox
       aria-label="User Menu"
       onAction={(key) => router.push(key)}
-      className={`p-0 gap-0 divide-y divide-default-300/50 dark:divide-default-100/80 ${
-        userDetails.role == "admin" ? "bg-[#034CAD]" : "bg-red-500"
-      }  max-w-[300px] text-white overflow-visible shadow-small rounded-medium m-2`}
+      className={`p-0 gap-0 divide-y divide-default-300/50 dark:divide-default-100/80 bg
+       bg-blue-950  max-w-[300px] text-white overflow-visible shadow-small rounded-medium m-2`}
       itemClasses={{
         base: "px-3 first:rounded-t-medium last:rounded-b-medium rounded-none gap-3 h-12 data-[hover=true]:bg-default-100/80",
       }}

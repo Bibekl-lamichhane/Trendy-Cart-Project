@@ -25,7 +25,8 @@ const layout = ({ children }) => {
   return (
     <div>
       <div className="flex m-4">
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center  ">
+          <img src="/logo.png" width={100} height={60} alt="logo" />
           <SideBar />
         </div>
         <div className="w-4/5">

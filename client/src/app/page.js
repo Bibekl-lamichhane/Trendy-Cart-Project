@@ -8,10 +8,7 @@ import {
   Button,
   Card,
   CardBody,
-  Select,
   RadioGroup,
-  CardHeader,
-  SelectItem,
   Radio,
 } from "@nextui-org/react";
 import { useFormik } from "formik";
@@ -132,7 +129,7 @@ export default function Main() {
                   type="password"
                 />
                 <p className="text-center text-small">
-                  Need to create an account?{" "}
+                  Need to create an account?
                   <Link size="sm" onPress={() => setSelected("sign-up")}>
                     Sign up
                   </Link>
