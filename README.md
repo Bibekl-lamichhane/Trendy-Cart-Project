@@ -6,7 +6,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/Bibekl-lamichhane/Trendy-Cart-Project/blob/main/README.md">
-    <img src="images\nextrade-removebg-preview.png" alt="Logo" width="80" height="80">
+    <img src="client/public/logo.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Trendy-Cart-Project</h3>
@@ -58,7 +58,7 @@ Here are the few screenshots of my project:
 
 1. Home Page
 <div align="center">
-    <img src="" alt="homepage" width="800" height="480">
+    <img src="/client/public/home.png" alt="homepage" width="800" height="480">
 </div>
 <br/>
 
