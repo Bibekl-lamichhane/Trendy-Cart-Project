@@ -28,7 +28,7 @@ export default function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const { userDetails } = useSelector((state) => state.user);
-
+  const { cartItems } = useSelector((state) => state.product);
   const dispatch = useDispatch();
   const router = useRouter();
 
@@ -154,12 +154,14 @@ export default function NavBar() {
       </NavbarContent>
       <NavbarContent>
         <div className="flex">
-          <button className="relative">
-            <PiShoppingCartBold size={27} color="blue" />
-            <span className="rounded-full bg-orange-400 text-white px-[1.5px] py-[1.5px] text-[11px] absolute bottom-[14px] left-[20px]">
-              {0}
-            </span>
-          </button>
+          <Link href="/cart">
+            <button className="relative">
+              <PiShoppingCartBold size={27} color="blue" />
+              <span className="rounded-full bg-orange-400 text-white px-[1.5px] py-[1.5px] text-[11px] absolute bottom-[14px] left-[20px]">
+                {cartItems.length}
+              </span>
+            </button>
+          </Link>
         </div>
       </NavbarContent>
       <NavbarMenu>

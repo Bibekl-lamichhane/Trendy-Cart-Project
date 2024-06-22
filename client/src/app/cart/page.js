@@ -1,8 +1,8 @@
 "use client";
 import Footer from "@/components/Footer";
 import NavBar from "@/components/Navbar";
-import { removefromCart } from "@/redux/reducerSlices/productSlice";
-import { Button } from "@nextui-org/react";
+import { removeFromCart } from "@/redux/reducerSlices/productSlice";
+import { Button, Image } from "@nextui-org/react";
 import Link from "next/link";
 import React from "react";
 import { IoReturnUpBackOutline } from "react-icons/io5";
@@ -20,47 +20,36 @@ const Cart = () => {
       </Link>
       <div>
         <p className="text-3xl text-orange-500 font-bold m-10 ">
-          Check your Cart :{JSON.stringify(cartItems)}
+          Check your Cart :
         </p>
         <div className="shadow-sm ">
           <p>
-            {cartItems.length > 0 ? (
-              <div>
-                {cartItems.map((item) => {
+            {cartItems.length > 0
+              ? cartItems.map((item) => {
                   return (
-                    <div className="mx-10  shadow-lg  rounded-2xl p-10  flex items-center justify-around">
+                    <div className="p-2 m-4 shadow-md flex justify-around">
+                      <div>Images</div>
                       <div>
-                        {/* <img
-                          src={`${item.productImage}`}
-                          alt={`${item.productName}`}
-                          width={180}
-                          height={100}
-                        /> */}
-                      </div>
-                      <div>
-                        <p className="my-2">
-                          <span>Product Name :</span>
+                        <div>
+                          <span className="mx-4">Product Name</span>
                           <span>{item.productName}</span>
-                        </p>
-                        <p className="my-2">
-                          <span>Price</span>
+                        </div>
+                        <div>
+                          <span className="mx-4">Product Price </span>
                           <span>{item.productPrice}</span>
-                        </p>
+                        </div>
                         <Button
-                          onClick={() => dispatch(removefromCart(item._id))}
-                          className="bg-transparent border-2"
+                          onClick={() => dispatch(removeFromCart(item._id))}
+                          className="text-sm bg-transparent border-2 px-1 py-0 ml-20 my-2"
                         >
-                          Delete Item
-                          <MdDelete size={20} />
+                          Remove
+                          <MdDelete />
                         </Button>
                       </div>
                     </div>
                   );
-                })}
-              </div>
-            ) : (
-              "No items in your cart"
-            )}
+                })
+              : "No Cart Items"}
           </p>
         </div>
       </div>

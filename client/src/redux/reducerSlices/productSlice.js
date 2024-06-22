@@ -1,31 +1,30 @@
 import { createSlice } from "@reduxjs/toolkit";
+import toast from "react-hot-toast";
 
 const initialState = {
   selectedProduct: "",
   cartItems: [],
 };
 
-const productSlice = createSlice({
-  name: "cart",
+const productSLice = createSlice({
+  name: "box",
   initialState: initialState,
   reducers: {
-    addtoCart(state, actions) {
+    addToCart(state, actions) {
       state.cartItems.push(actions.payload);
+      toast("Item has been added to cart");
     },
-    removefromCart(state, actions) {
-      state.cartItems = state.cartItems.filter(
-        (item) => item._id !== action.payload
-      );
-      // const existingCartItems = [...state.cartItems];
-      // const removedCart = existingCartItems.filter((item) => {
-      //   if (item._id !== actions.payload) {
-      //     return item;
-      //   }
-      //   state.cartItems = removedCart;
-      // });
+    removeFromCart(state, actions) {
+      const existingCartItems = [...state.cartItems];
+      const removedCart = existingCartItems.filter((item) => {
+        if (item._id !== actions.payload) {
+          return item;
+        }
+      });
+      state.cartItems = removedCart;
     },
   },
 });
 
-export const { addtoCart, removefromCart } = productSlice.actions;
-export default productSlice.reducer;
+export const { addToCart, removeFromCart } = productSLice.actions;
+export default productSLice.reducer;

@@ -4,10 +4,11 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 import { GiTakeMyMoney } from "react-icons/gi";
 import { useRouter } from "next/navigation";
 import { useDispatch } from "react-redux";
-import { addtoCart } from "@/redux/reducerSlices/productSlice";
+import { addToCart } from "@/redux/reducerSlices/productSlice";
 export default function ProductCard(props) {
   const router = useRouter();
   const dispatch = useDispatch();
+  const productInfo = props;
   return (
     <Card
       className="w-[280px] h-[400px]"
@@ -43,7 +44,7 @@ export default function ProductCard(props) {
             <GiTakeMyMoney size={20} />
           </Button>
           <Button
-            onClick={() => dispatch(addtoCart())}
+            onClick={() => dispatch(addToCart(productInfo))}
             className="flex text-[12px hover:bg-orange-500 hover:text-white bg-transparent border-2"
           >
             Add to Cart

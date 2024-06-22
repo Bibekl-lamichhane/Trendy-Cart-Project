@@ -1,7 +1,7 @@
 "use client";
 import NavBar from "@/components/Navbar";
 import RatingStars from "@/components/RatingStars";
-import { addtoCart } from "@/redux/reducerSlices/productSlice";
+import { addToCart, addtoCart } from "@/redux/reducerSlices/productSlice";
 import { Button } from "@nextui-org/react";
 import axios from "axios";
 import Link from "next/link";
@@ -12,13 +12,14 @@ import { IoReturnUpBackOutline } from "react-icons/io5";
 import { useDispatch } from "react-redux";
 
 const page = ({ params }) => {
+  const dispatch = useDispatch();
   const [productDetails, setproductDetails] = useState([]);
   useEffect(() => {
     if (params.id) {
       fetchProductDetails();
     }
   }, []);
-  const dispatch = useDispatch();
+
   const fetchProductDetails = async () => {
     const { data } = await axios.get(
       `http://localhost:4000/products/${params.id}`
@@ -73,7 +74,7 @@ const page = ({ params }) => {
               <GiTakeMyMoney size={20} />
             </Button>
             <Button
-              onClick={() => dispatch(addtoCart(productDetails))}
+              onClick={() => dispatch(addToCart(productDetails))}
               className="flex text-[12px hover:bg-orange-500 hover:text-white bg-transparent border-2"
             >
               Add to Cart
