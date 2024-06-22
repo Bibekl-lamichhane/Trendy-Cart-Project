@@ -17,14 +17,14 @@ export default function ProductCard(props) {
       onPress={() => router.push("products/" + props.item._id)}
     >
       <CardBody className="overflow-visible p-0">
-        {/* <Image
+        <Image
           shadow="sm"
           radius="lg"
           width="100%"
           alt={props.item.productName}
           className="w-full object-cover h-[280px]"
           src={props.item.productImage}
-        /> */}
+        />
       </CardBody>
       <CardFooter className="flex-col ">
         <div className="w-[100%]">

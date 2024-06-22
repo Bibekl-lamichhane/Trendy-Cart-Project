@@ -6,7 +6,7 @@ function Footer() {
     <div className="mt-8">
       <hr />
       <footer className="flex-col  p-10 text-base-content rounded dark:bg-slate-900 dark:text-white shadow-lg">
-        <nav className="grid grid-flow-col gap-14 justify-center">
+        <nav className="grid md:grid-flow-col grid-flow-row md:gap-14 gap-5 md:justify-center">
           <Link href="/home" className="link-hover hover:text-orange-500 ">
             Home
           </Link>

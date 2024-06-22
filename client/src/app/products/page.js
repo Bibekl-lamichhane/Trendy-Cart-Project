@@ -16,7 +16,7 @@ const page = () => {
   return (
     <>
       <Navbar />
-      <div className="grid grid-cols-4 gap-6 m-7">
+      <div className="container grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-5  m-7 ">
         {productList.map((item) => {
           return <ProductCard item={item} />;
         })}
